@@ -1,47 +1,39 @@
-## AP's XO Game
-Title: AP's XO Game
+## User Story 
+### AP's XO Game
 
-As a player, I want to:
-Start a New Game
-Description: I want to start a fresh game of XO (Tic-Tac-Toe) so that I can begin playing from scratch.
-Acceptance Criteria:
-- The game should initialize with a blank 3x3 grid.
-- A "Start Game" button should be available to begin a new game.
-- Take Turns with Another Player
+1. Title: AP's XO Game User Story
 
-Description: I want to play against another player, taking turns to place Xs and Os on the grid.
-Acceptance Criteria:
-- The game should alternate turns between Player X and Player O.
-- Each player should be able to place their symbol (X or O) on an empty cell.
-- The current player's turn should be clearly indicated.See Whose Turn It Is
+2. As a player,I want to:
+- Start a new game
+So that I can begin a fresh round of XO (Tic-Tac-Toe) without any prior game data.
 
-Description: I want to know whose turn it is to play so that I can make the next move.
-Acceptance Criteria:
-- The UI should display a message or indicator showing whether it is Player X's or Player O's turn.
-- Check for a Winner After Each Move
+- Take turns with another player to place Xs and Os on a 3x3 grid
+So that both players have the opportunity to play and the game progresses turn by turn.
 
-Description: I want the game to automatically check if there's a winner after every move.
-Acceptance Criteria:
-- The game should check for a winning condition (three of the same symbol in a row) after each move.
-- If a player wins, the game should announce the winner.
-- See the Game End with a Win or a Draw
+- See whose turn it is to play
+So that I know when it’s my turn and when to make a move.
 
-Description: I want to be informed when the game ends, either with a win for one player or a draw if the grid is full.
-Acceptance Criteria:
-- The game should display a message announcing the winner if three symbols are aligned.
-- The game should display a message indicating a draw if all cells are filled and no winner is declared.
-- Reset the Game to Start Over
+- Check for a winner after each move
+So that I can immediately see if there’s a winner or if the game is still ongoing.
 
-Description: I want to be able to reset the game to start a new round without refreshing the page.
-Acceptance Criteria:
-- A "Reset Game" button should be available.
-- Clicking the button should clear the grid and reset the game state to allow for a new game.
+- See the game end with a win or a draw
+So that I am informed of the game’s outcome, whether it’s a win for one player or a draw if the grid is full.
 
-### Dependencies:
-- Node.js
-- React
+- Reset the game to start over
+So that I can quickly start a new game without having to refresh the page.
 
-### Technical Details:
-Frontend: Built with React to create the interactive grid and game controls.
-Backend: Managed with Node.js to handle game logic, including checking for winners and handling game state.
-Persistence: Maintain the game state during a session to ensure the current state is displayed correctly to the players.
+3. Acceptance Criteria:
+- The game starts with an empty 3x3 grid.
+- Players alternate turns, starting with Player X.
+- The game announces a winner when three of the same symbols are aligned horizontally, vertically, or diagonally.
+- The game announces a draw if all spaces are filled without a winner.
+- The game provides a reset button to start a new game.
+
+4. Dependencies:
+- Node.js: For backend management of game state and logic.
+- React: For building the interactive frontend interface.
+
+5. Technical Details:
+- Frontend: Utilize React to create the game interface, handle user interactions, and display game status.
+- Backend: Use Node.js to manage game logic, validate moves, and determine game outcomes.
+- Persistence: Ensure that game state is maintained during the session for accurate gameplay and status updates.
