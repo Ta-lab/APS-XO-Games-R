@@ -8,6 +8,20 @@ function App() {
   const [winner, setWinner] = useState(null);
   const [draw, setDraw] = useState(false);
 
+  const [winCountPlayer1, setWinCountPlayer1] = useState(0);
+  const [winCountPlayer2, setWinCountPlayer2] = useState(0);
+
+  useEffect(() => {
+    if (winner === "X") {
+      setWinCountPlayer1(winCountPlayer1 + 1);
+    } else if (winner === "O") {
+      setWinCountPlayer2(winCountPlayer2 + 1);
+    } else {
+      setWinCountPlayer2(0);
+    }
+  }, [winner]);
+
+
   useEffect(() => {
     const savedState = JSON.parse(localStorage.getItem('gameState'));
     if (savedState) {
@@ -82,6 +96,26 @@ function App() {
       <div className="status">
         {winner ? <h2>{winner === 'Draw' ? 'Draw!' : `Winner: ${winner}`}</h2> : <h2>Current Player: {currentPlayer}</h2>}
       </div>
+
+      <div>
+        {winner !== null && (
+          winner === "X" ? (
+            "Player 1 Wins"
+          ) : winner === "O" ? (
+            "Player 2 Wins"
+          ) : (
+            "Draw"
+          )
+        )}
+
+        <br></br>
+
+        <div>
+          <p>Player 1 Win Count: {winCountPlayer1}</p>
+          <p>Player 2 Win Count: {winCountPlayer2}</p>
+        </div>
+      </div>
+      
       <div className='status'>
         <button onClick={resetGame}>Start New Game</button> &nbsp;
         <button onClick={resetGame}>Reset Game</button>
