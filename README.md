@@ -39,3 +39,13 @@ AP's XO Game is a simple Tic-Tac-Toe game developed using Node.js for the backen
 ## Frontend
 - react: A JavaScript library for building user interfaces.
 - axios: A promise-based HTTP client for the browser and Node.js.
+
+
+## Screenshots
+
+### Start Game Screen
+![Start Game](frontend/assets/screen_1.png)
+
+### In-Game View
+![In-Game View](frontend/assets/screen_2.png)
+![In-Game View](frontend/assets/screen_3.png)
